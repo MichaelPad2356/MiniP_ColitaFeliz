@@ -3,7 +3,7 @@
     <h1 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #333;">Colita Feliz Adopciones</h1>
     <div class="card-columns">
       @for(adopt of animalesAdop; track adopt; let i=$index){
-      <div class="card rounded-lg shadow-lg mb-4">
+      <div class="card rounded-lg shadow-lg mb-4" style="width: 225px;">
         <img src="{{adopt.imagen}}" class="card-img-top rounded-top" alt="...">
         <div class="card-body">
           <h3 class="card-title text-center mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #FF6347;">{{adopt.nombre}}</h3>
