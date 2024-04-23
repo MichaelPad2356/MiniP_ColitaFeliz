@@ -1,0 +1,120 @@
+
+.hero {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: flex; /* Agregar display: flex */
+    justify-content: space-between; /* Distribuir elementos horizontalmente */
+    align-items: center; /* Centrar elementos verticalmente */
+    padding: 20px; /* Agregar un poco de espacio interno */
+  }
+
+.container {
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Espacio entre elementos */
+    margin-left: -1vw;
+    margin-right: -2vw;
+    
+  }
+  
+.display-4{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #360be3;
+    font-weight: bold;
+    text-shadow: #fefbfb 2px 2px;
+    margin-right: 30px;
+}
+
+.lead{
+    padding: 10px 50px;
+   margin-left: 80px;
+}
+
+.btn {
+    padding: 10px 20px; /* Ajustar el padding horizontal */
+    background-color: #fff; /* Color de fondo del botón */
+    color: #333; /* Color del texto del botón */
+    border: none; /* Eliminar el borde del botón */
+    border-radius: 4px; /* Añadir bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  }
+
+.features .card {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra a las cajas */
+}
+
+.features .card:hover {
+    transform: translateY(-10px);
+}
+
+#carouselExampleCaptions {
+    max-width: 100%; /* Ancho máximo del carrusel */
+    margin: 0 auto; /* Centrar el carrusel horizontalmente */
+}
+
+/* Estilos para hacer las imágenes del carrusel más pequeñas */
+.carousel-inner img {
+    width: 100%; /* Hace que las imágenes se ajusten al ancho del carrusel */
+    height: auto; /* Permite que las imágenes se ajusten proporcionalmente */
+}
+
+#introduction {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#introduction h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#introduction p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Animación de entrada para los elementos */
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+.animate__fadeInRight {
+    animation-name: fadeInRight;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
