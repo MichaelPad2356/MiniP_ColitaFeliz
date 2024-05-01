@@ -29,3 +29,37 @@
     height: 200%;
     opacity: 1;
   }
+
+   /* Estilos para pantallas grandes (5 columnas) */
+   .card-columns {
+    column-count: 5;
+    column-gap: 1.25rem;
+  }
+
+  /* Estilos para pantallas medianas (4 columnas) */
+  @media (max-width: 1200px) {
+    .card-columns {
+      column-count: 4;
+    }
+  }
+
+  /* Estilos para pantallas pequeñas (3 columnas) */
+  @media (max-width: 992px) {
+    .card-columns {
+      column-count: 3;
+    }
+  }
+
+  /* Estilos para pantallas muy pequeñas (2 columnas) */
+  @media (max-width: 768px) {
+    .card-columns {
+      column-count: 2;
+    }
+  }
+
+  /* Estilos para pantallas móviles (1 columna) */
+  @media (max-width: 576px) {
+    .card-columns {
+      column-count: 1;
+    }
+  }
