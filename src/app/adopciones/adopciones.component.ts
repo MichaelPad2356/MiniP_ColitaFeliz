@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-adopciones',
   standalone: true,
@@ -23,11 +24,6 @@ export class AdopcionesComponent {
   ngOnInit(): void{
     this.animalesAdop = this.adoptaService.getAnimales();
   }
-
-  // Define una propiedad para almacenar el color aleatorio
-  
-
-
 
   // Método para generar un color aleatorio
   generateRandomColor(): string {
