@@ -1,3 +1,4 @@
+<br><br><br><br><br><br>
 <div class="container my-5">
   <div class="main-container">
     <div class="animal-details-container">
@@ -21,7 +22,7 @@
         <br>
         <mat-form-field>
           <mat-label>Fecha</mat-label>
-          <input matInput [matDatepicker]="picker2" [(ngModel)]="cliente.fechaCte" (ngModelChange)="formatoFecha()">
+          <input matInput [matDatepicker]="picker2" [(ngModel)]="cliente.fechaCte" [min]="fechaActual">
           <mat-hint>MM/DD/YYYY</mat-hint>
           <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
           <mat-datepicker #picker2></mat-datepicker>
