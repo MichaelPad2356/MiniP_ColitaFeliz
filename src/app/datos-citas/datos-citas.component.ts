@@ -26,6 +26,8 @@ import { DatePipe } from '@angular/common';
 export class DatosCitasComponent {
   animalSeleccionado: any;
   cliente!: Citas;
+  fecha2: any;
+  fechaActual: Date = new Date();
 
   constructor(public adoptaService:AdoptaService, public activatedRoute:ActivatedRoute, public citasService: CitasService, public datePipe: DatePipe, private router: Router){
     this.activatedRoute.params.subscribe(params => {
@@ -62,25 +64,25 @@ export class DatosCitasComponent {
       return; // Detiene la ejecución del método
     }
 
-
+    this.formatoFecha();
+  
     // Verificar si la fecha y hora seleccionadas ya están ocupadas
-    const clientes = this.citasService.getClientes(); // Obtener lista de clientes del servicio
+    const clientes = this.citasService.getClientes();
     const citaExistente = clientes.find(cita => cita.fechaCte === this.cliente.fechaCte && cita.horaCte === this.cliente.horaCte);
-
     if (citaExistente) {
       // Si la cita ya existe, muestra un mensaje de error
       this.citaExistente();
+      this.regresarFormato();
       return; // Detiene la ejecución del método
     }
-
-
+  
     // Verificar si el nombre de la mascota ya está en proceso de adopción
     if (this.nombreEnAdopcion(this.animalSeleccionado.nombre)) {
       // Si el nombre de la mascota está en proceso de adopción, muestra un mensaje
       this.mascotaEnAdopcion();
       return; // Detiene la ejecución del método
     }
-
+  
     // Si todos los campos están llenos y no hay citas existentes, procede a agregar la nueva cita
     this.confirmacion();
   }
@@ -94,8 +96,13 @@ export class DatosCitasComponent {
   }
 
   formatoFecha() {
+    this.fecha2 = this.cliente.fechaCte;
     // Formatear la fecha al formato deseado
     this.cliente.fechaCte = this.datePipe.transform(this.cliente.fechaCte, 'yyyy-MM-dd');
+  }
+
+  regresarFormato(){
+    this.cliente.fechaCte = this.fecha2;
   }
 
 
@@ -126,7 +133,16 @@ export class DatosCitasComponent {
     });
   }
 
-  confirmacion(): void{
+  fechaInvalida(): void {
+    Swal.fire({
+      icon: 'error',
+      title: 'Fecha inválida',
+      text: 'No puedes seleccionar una fecha anterior a la fecha actual.',
+      confirmButtonText: 'Entendido'
+    });
+  }
+
+  confirmacion(): void {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
         confirmButton: "btn btn-success",
@@ -134,6 +150,7 @@ export class DatosCitasComponent {
       },
       buttonsStyling: false
     });
+  
     swalWithBootstrapButtons.fire({
       title: "¿Estas seguro que deseas agendar la cita?",
       icon: "warning",
@@ -143,30 +160,29 @@ export class DatosCitasComponent {
       reverseButtons: true
     }).then((result) => {
       if (result.isConfirmed) {
+        // Obtener la ruta de la imagen del animal
+        const imagenAnimal = this.animalSeleccionado.imagen;
+  
         swalWithBootstrapButtons.fire({
           title: "Datos enviados exitosamente!!",
-          text: "Presentate el dia y la hora seleccionada",
+          text: `Presentate el dia y la hora seleccionada para conocer a ${this.animalSeleccionado.nombre}`,
+          imageUrl: imagenAnimal,
+          imageWidth: 400,
+          imageHeight: 300,
+          imageAlt: 'Imagen del animal',
           icon: "success"
         });
-
         this.nuevoCliente();
         this.router.navigate(['/adopciones']);
-        // this.datosEnviados();
-      } else if (
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel
-      ) {
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
         swalWithBootstrapButtons.fire({
           title: "Cancelacion exitosa",
           text: "Los datos no han sido enviados",
           icon: "error"
         });
+        this.regresarFormato();
         return;
       }
     });
   }
-  
-  
-
-
 }

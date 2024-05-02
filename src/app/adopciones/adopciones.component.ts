@@ -4,12 +4,13 @@ import { animPeGa } from '../animales';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 
 @Component({
   selector: 'app-adopciones',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterModule],
+  imports: [FormsModule, CommonModule, RouterModule, FooterComponent],
   templateUrl: './adopciones.component.html',
   styleUrl: './adopciones.component.css'
 })

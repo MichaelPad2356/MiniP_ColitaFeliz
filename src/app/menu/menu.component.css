@@ -49,3 +49,104 @@
   }
   
 
+  /* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Estilos para pantallas grandes (desktop) */
+@media (min-width: 1200px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Estilos para pantallas medianas (4 columnas) */
+@media (max-width: 1200px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Estilos para pantallas pequeñas (3 columnas) */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Estilos para pantallas muy pequeñas (2 columnas) */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-item {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Estilos para pantallas móviles (1 columna) */
+@media (max-width: 576px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-item {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+}
+
+
