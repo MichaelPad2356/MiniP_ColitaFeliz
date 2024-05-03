@@ -1,1 +1,22 @@
-<p>Home works!</p>
+<div class="container">
+    <app-historias-adopciones (storySelected)="showStoryDetails($event)"></app-historias-adopciones>
+    @if (selectedStory)
+    {
+      <div class="story-details">
+        <h2 class="titulo">
+          <i class="fas fa-heart"></i> {{ selectedStory.title }}
+        </h2>
+        <div class="image-container">
+          <img src="{{ selectedStory.imageUrl }}" alt="" class="story-image" />
+        </div>
+        <p><i class="fas fa-calendar-alt"></i> Fecha de adopción: {{ selectedStory.date }}</p>
+        <p>{{ selectedStory.details }}</p>
+      </div>
+    }
+  </div>
+  <div class="faq-section">
+    <h2 class="pFrec">
+      <i class="fas fa-question-circle"></i> Preguntas Frecuentes - Colita Feliz
+    </h2>
+    <app-preguntas-frecuentes [preguntas]="faqs"></app-preguntas-frecuentes>
+  </div>
