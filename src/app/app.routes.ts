@@ -6,5 +6,6 @@ import { DatosCitasComponent } from './datos-citas/datos-citas.component';
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'adopciones', component: AdopcionesComponent},
-    {path: 'citas/:index', component: DatosCitasComponent}
+    {path: 'citas/:index', component: DatosCitasComponent},
+    {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
