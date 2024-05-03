@@ -79,7 +79,7 @@
     box-sizing: border-box; /* Incluye el padding en el ancho */
     font-family: 'Courier New', Courier, monospace;
   }
-  
+
   .video {
     display: flex;
     justify-content: center;

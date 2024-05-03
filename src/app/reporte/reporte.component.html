@@ -1,0 +1,77 @@
+<div class="cuerpo">
+  <h2>Reporte de Citas</h2>
+
+  <h3>Citas Anteriores</h3>
+  <table class="citas-table">
+    <thead>
+      <tr>
+        <th>Nombre del Cliente</th>
+        <th>Teléfono</th>
+        <th>Fecha y Hora</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (cita of citasAnteriores; track cita) {
+        <tr>
+          <td>{{ cita.nombreCte }}</td>
+          <td>{{ cita.telCte }}</td>
+          <td>{{ cita.fechaCte | date:'dd/MM/yyyy' }} {{ cita.horaCte }}</td>
+        </tr>
+      }
+      <!-- Si no hay citas anteriores, mostrar un mensaje -->
+      @if (citasAnteriores.length === 0) {
+        <tr>
+          <td colspan="3">No hay citas anteriores para mostrar</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <h3>Citas Pendientes</h3>
+  <table class="citas-table">
+    <thead>
+      <tr>
+        <th>Nombre del Cliente</th>
+        <th>Teléfono</th>
+        <th>Fecha y Hora</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (cita of citasPendientes; track cita) {
+        <tr>
+          <td>{{ cita.nombreCte }}</td>
+          <td>{{ cita.telCte }}</td>
+          <td>{{ cita.fechaCte | date:'dd/MM/yyyy' }} {{ cita.horaCte }}</td>
+        </tr>
+      }
+      <!-- Si no hay citas pendientes, mostrar un mensaje -->
+      @if (citasPendientes.length === 0) {
+        <tr>
+          <td colspan="3">No hay citas pendientes para mostrar</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <div class="disponibles">
+    <br>
+      <h3>Animales Disponibles</h3>
+      <ul>
+        <!-- Utilizar *ngIf para mostrar la lista solo si hay animales disponibles -->
+        @if (animalesDisponibles.length > 0) {
+          <!-- Iterar sobre los animales disponibles -->
+          @for (animal of animalesDisponibles; track animal) {
+            <li>
+              {{ animal.nombre }} ({{ animal.raza }})
+            </li>
+          }
+        } @else {
+          <li>No hay animales disponibles para adoptar</li>
+        }
+        <!-- Mostrar mensaje si no hay animales disponibles -->
+      </ul>
+    </div>
+
+
+
+  </div>
