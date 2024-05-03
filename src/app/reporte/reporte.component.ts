@@ -4,11 +4,13 @@ import { animPeGa } from '../animales';
 import { CitasService } from '../serv2/citas.service';
 import { AdoptaService } from '../serv1/adopta.service';
 import { DatePipe } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-reporte',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe, MatButtonModule,  MatCardModule,],
   templateUrl: './reporte.component.html',
   styleUrl: './reporte.component.css',
 })
@@ -19,6 +21,9 @@ export class ReporteComponent implements OnInit{
   citasPendientes: Citas[] = [];
   animales: animPeGa[] = [];
   animalesDisponibles: animPeGa[] = [];
+  mostrarCitasAnteriores = false;
+  mostrarCitasPendientes = false;
+ 
 
   constructor(private citasService: CitasService, private adoptaService: AdoptaService){}
 
@@ -36,8 +41,9 @@ export class ReporteComponent implements OnInit{
     //Filtrar citas anteriores y pendientes al dia actual
     const fechaActual = new Date();
     this.citasAnteriores = todasCitas.filter(cita => cita.fechaCte && new Date(cita.fechaCte) < fechaActual);
-    this.citasPendientes = todasCitas.filter(cita => cita.fechaCte && new Date(cita.fechaCte) >= fechaActual)
+    this.citasPendientes = todasCitas.filter(cita => cita.fechaCte && new Date(cita.fechaCte) >= fechaActual);
   }
+
 
   obtenerAnimales(){
     //obtener animales disponibles
@@ -57,7 +63,13 @@ export class ReporteComponent implements OnInit{
     return this.citasPendientes.some(cita => cita.nombreCte === animal.nombre);
   }
 
-  
+  trackByCita(index: number, cita: Citas): string {
+    return cita.nombreCte + cita.fechaCte + cita.horaCte;
+  }
+
+  trackByAnimal(index: number, animal: animPeGa): string {
+    return animal.nombre;
+  }
 
 
 }

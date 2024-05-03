@@ -1,7 +1,7 @@
 .cuerpo{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #cdfafb;
-    color: #333;
+    color: #f6dada;
 }
 
 h2{
@@ -45,6 +45,30 @@ h3 {
   
   .citas-table tbody tr:hover {
     background-color: #e6e6e6; /* Gris */
+  }
+
+  .imagen-mascota {
+    width: 50px; /* Ajusta este valor según el tamaño deseado */
+    height: 50px; /* Ajusta este valor según el tamaño deseado */
+    object-fit: cover; /* Esto mantendrá las proporciones de la imagen */
+  }
+
+  mat-card {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-card-content {
+    margin-left: 20px;
+  }
+  
+  .botones {
+    margin-bottom: 20px;
+  }
+  
+  .botones button {
+    margin-right: 10px;
   }
 
   /* Estilos para la lista de animales */
