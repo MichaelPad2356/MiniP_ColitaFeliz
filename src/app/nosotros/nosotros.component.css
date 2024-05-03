@@ -79,4 +79,16 @@
     box-sizing: border-box; /* Incluye el padding en el ancho */
     font-family: 'Courier New', Courier, monospace;
   }
+
+  .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  iframe {
+    width: 640px;
+    height: 360px;
+  }
   
