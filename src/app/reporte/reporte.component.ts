@@ -49,15 +49,6 @@ export class ReporteComponent implements OnInit {
     this.animales = this.adoptaService.getAnimales();
   }
 
-
-  tieneCitaAnterior(animal: animPeGa): boolean {
-    return this.citasAnteriores.some((cita) => cita.nombreCte === animal.nombre);
-  }
-
-  tieneCitaPendiente(animal: animPeGa): boolean {
-    return this.citasPendientes.some((cita) => cita.nombreCte === animal.nombre);
-  }
-
   trackByCita(index: number, cita: Citas): string {
     return cita.nombreCte + cita.fechaCte + cita.horaCte;
   }
