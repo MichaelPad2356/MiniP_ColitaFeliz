@@ -1,3 +1,17 @@
+.cuerpo{
+  margin-top: 30px;
+}
+
+.tituloP{
+  font-size: 50px;
+  font-weight: bold;
+  color:rgb(250, 182, 94);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgb(173, 215, 247);
+  padding: 15px;
+}
+
 .disponibles {
   justify-content: space-around;
   padding: 100px;
