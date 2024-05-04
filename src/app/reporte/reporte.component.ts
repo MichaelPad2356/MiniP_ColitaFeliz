@@ -48,11 +48,18 @@ export class ReporteComponent implements OnInit{
   obtenerAnimales(){
     //obtener animales disponibles
     this.animales = this.adoptaService.getAnimales();
-    
+
     // Filtrar animales disponibles que no tienen citas anteriores ni pendientes
     this.animalesDisponibles = this.animales.filter(animal => !this.tieneCitaAnterior(animal) && !this.tieneCitaPendiente(animal));
   }
 
+
+  esMascotaAdoptada(nombreMascota: string): boolean {
+    // Comprobar si la mascota está en el localStorage como adoptada
+    const mascotasAdoptadas = JSON.parse(localStorage.getItem('mascotasAdoptadas') || '[]');
+    return mascotasAdoptadas.includes(nombreMascota);
+  }
+  
   tieneCitaAnterior(animal: animPeGa): boolean {
     // Comprobar si el animal tiene citas anteriores
     return this.citasAnteriores.some(cita => cita.nombreCte === animal.nombre);
