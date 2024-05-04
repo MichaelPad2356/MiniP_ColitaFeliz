@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { DomseguroPipe } from '../domseguro.pipe';
 
 @Component({
-  selector: 'app-nosotros',
+  selector: 'app-nosotros', 
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet, DomseguroPipe],
   templateUrl: './nosotros.component.html',
   styleUrls: ['./nosotros.component.css']
+ 
 })
-export class NosotrosComponent implements OnInit {
-  videoUrl: SafeResourceUrl | null = null; // Inicializamos a null
+export class NosotrosComponent {
+  title = 'videoseguro';
+  video:string="zQ6CB4pZIYs";
 
-  constructor(private sanitizer: DomSanitizer) { }
-
-  ngOnInit(): void {
-    const videoUrlString = 'https://www.youtube.com/watch?v=zQ6CB4pZIYs';
-    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(videoUrlString);
-  }
+  title2 = 'videoseguro2';
+  instalaciones:string="s1QUYZyQKjA";
+  
 }
