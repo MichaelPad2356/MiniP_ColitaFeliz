@@ -58,29 +58,27 @@
 }
 
 /*Estilos de los card info*/
+/* Estilos base para las filas y columnas */
 .row {
   display: flex;
-  justify-content: space-around; /* Esto asegura que haya espacio alrededor de cada columna */
-  align-items: flex-start; /* Alinea las columnas en la parte superior */
+  flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas más pequeñas */
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .column {
-  flex: 1;
   padding: 20px;
-  max-width: 50%; /* Esto limita el ancho de cada columna al 50% del contenedor */
+  flex: 1 1 300px; /* Ajusta para que cada columna tenga al menos 300px antes de envolver */
+  max-width: 50%; /* Limita el ancho máximo a 50% para pantallas grandes */
 }
-.column img {
-    width: 600px; /* Ajusta a tu preferencia */
-    height: auto; /* Para mantener la proporción */
-    margin-bottom: 20px;
-    justify-content: center;
-  }
-  
-  .column {
-    flex: 1;
-    padding: 20px;
-  }
 
+.column img {
+  width: 100%; /* Hace que las imágenes sean flexibles y se adapten al contenedor */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los pasos */
 .step {
   background-color: #f3f3f3;
   border-radius: 8px;
@@ -90,11 +88,11 @@
 }
 
 .step-number {
-  font-size: 20px;
+  font-size: 20px; /* Aumenta el tamaño para mejor visibilidad */
   color: #ffffff;
   background-color: #ffa500;
-  width: 30px;
-  height: 30px;
+  width: 40px; /* Ajusta según la visibilidad deseada */
+  height: 40px; /* Mantiene la proporción del círculo */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -113,6 +111,25 @@ p {
   font-size: 16px;
 }
 
+@media (max-width: 768px) {
+  .column {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .step-number {
+    top: 10px; 
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    flex-direction: column; 
+  }
+}
+
+/*Requisitos*/
 .col {
     margin-bottom: 20px; 
   }
