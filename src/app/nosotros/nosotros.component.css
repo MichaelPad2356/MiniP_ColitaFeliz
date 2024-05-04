@@ -97,3 +97,69 @@
     font-weight: bold; 
     font-size: 15px;
   }
+  
+  .instalaciones {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    margin-bottom: 20px
+  }
+  
+  .video2 {
+    flex: 1;
+    margin-right: 30px; 
+  }
+  
+  .texto {
+    flex: 2;
+    font-size: 18px;
+    margin-top: 80px;
+  }
+
+  .imginsta {
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .imginsta img {
+    width: calc(30% - 10px); 
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .txtimg{
+    margin-top: 150px;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .imginsta img:hover {
+    transform: scale(1.1); 
+  }
+
+
+  .container-estadisticas {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .estadisticas {
+    flex: 1;
+    margin-right: 20px; 
+  }
+
+  .txtesta{
+    font-size: large;
+    padding-left: 30px;
+  }
+  
+  .imagen-estadisticas {
+    flex: 1;
+  }
+  
+  .imagen-estadisticas img {
+    width: 90%; 
+  }
+  
+  
