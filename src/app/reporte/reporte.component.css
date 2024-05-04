@@ -7,11 +7,16 @@
   font-weight: bold;
   color:rgb(250, 182, 94);
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px;
   background-color: rgb(173, 215, 247);
-  padding: 15px;
+  text-shadow: #333 3px 3px 2px;
 }
 
+.titulo-card {
+  text-align: center;
+  font-size: 24px;
+  background-color: rgb(173, 215, 247);
+}
 
 /* Estilos para los botones */
 .botones-container {
@@ -76,8 +81,9 @@
   text-align: center;
   color:rgb(250, 182, 94);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: bold;
+  margin-top: 10px;
  
 }
 

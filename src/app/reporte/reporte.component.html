@@ -1,6 +1,9 @@
 <br><br><br><br>
 <div class="cuerpo">
-  <h2  class="tituloP">Reporte de Citas</h2>
+  <mat-card >
+    <mat-card-title class="tituloP">Reporte de Citas</mat-card-title>
+  </mat-card>
+  
 
   <div class="botones-container">
     <button mat-raised-button color="primary" class="boton-grande" (click)="mostrarCitasAnteriores = true; mostrarCitasPendientes = false">Citas Anteriores</button>
@@ -10,7 +13,9 @@
   <div class="tabla-container">
     @if (mostrarCitasAnteriores) {
       <div>
-        <h3 class="titulo">Citas Anteriores</h3>
+        <mat-card class="titulo-card">
+          <h3 class="titulo">Citas Anteriores</h3>
+        </mat-card>
         <table class="citas-table tabla-llamativa">
           <thead>
             <tr>
@@ -43,7 +48,9 @@
 
     @if (mostrarCitasPendientes) {
       <div>
-        <h3 class="titulo">Citas Pendientes</h3>
+        <mat-card class="titulo-card">
+          <h3 class="titulo">Citas Pendientes</h3>
+        </mat-card>
         <table class="citas-table tabla-llamativa">
           <thead>
             <tr>

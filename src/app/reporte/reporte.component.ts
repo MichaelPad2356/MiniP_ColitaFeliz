@@ -6,13 +6,14 @@ import { AdoptaService } from '../serv1/adopta.service';
 import { DatePipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import moment from 'moment-timezone';
+import { MatCardModule } from '@angular/material/card';
 
 const ZONA_HORARIA_CDMX = 'America/Mexico_City';
 
 @Component({
   selector: 'app-reporte',
   standalone: true,
-  imports: [DatePipe, MatButtonModule],
+  imports: [DatePipe, MatButtonModule, MatCardModule],
   templateUrl: './reporte.component.html',
   styleUrls: ['./reporte.component.css'],
 })
