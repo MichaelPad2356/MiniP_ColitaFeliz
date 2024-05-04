@@ -1,27 +1,6 @@
 <br><br><br><br>
 <div class="cuerpo">
-  <h2  class="titulo">Reporte de Citas</h2>
-  <div class="disponibles">
-    <h3 class="titulo">Mascotas Disponibles</h3>
-    <div class="animal-card-container">
-      <!-- Renderizar solo las mascotas disponibles que no han sido adoptadas -->
-      @for (animal of animalesDisponibles; track trackByAnimal($index, animal)) {
-        <mat-card class="animal-card-item" [@animationEffect]>
-          <div class="animal-card">
-            <div class="imagen-container">
-              <img [src]="animal.imagen" alt="Imagen de la mascota" class="imagen-mascota" />
-            </div>
-            <div class="detalles-container">
-              <h4><b>{{ animal.nombre }} ({{ animal.raza }}</b>)</h4>
-              <p>Sexo: {{ animal.sexo }}</p>
-              <p>Color: {{ animal.color }}</p>
-              <p>Edad: {{ animal.edad }}</p>
-            </div>
-          </div>
-        </mat-card>
-      }
-    </div>
-  </div>
+  <h2  class="tituloP">Reporte de Citas</h2>
 
   <div class="botones-container">
     <button mat-raised-button color="primary" class="boton-grande" (click)="mostrarCitasAnteriores = true; mostrarCitasPendientes = false">Citas Anteriores</button>

@@ -5,7 +5,6 @@ import { CitasService } from '../serv2/citas.service';
 import { AdoptaService } from '../serv1/adopta.service';
 import { DatePipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
 import moment from 'moment-timezone';
 
 const ZONA_HORARIA_CDMX = 'America/Mexico_City';
@@ -13,7 +12,7 @@ const ZONA_HORARIA_CDMX = 'America/Mexico_City';
 @Component({
   selector: 'app-reporte',
   standalone: true,
-  imports: [DatePipe, MatButtonModule, MatCardModule],
+  imports: [DatePipe, MatButtonModule],
   templateUrl: './reporte.component.html',
   styleUrls: ['./reporte.component.css'],
 })
@@ -43,26 +42,11 @@ export class ReporteComponent implements OnInit {
     this.citasPendientes = todasCitas.filter((cita) =>
       cita.fechaCte && moment(cita.fechaCte).tz(ZONA_HORARIA_CDMX).isSameOrAfter(fechaActualCDMX)
     );
+
   }
 
   obtenerAnimales(): void {
     this.animales = this.adoptaService.getAnimales();
-
-    // Recuperar las mascotas guardadas en localStorage
-    const mascotasEnAdopcion = localStorage.getItem('mascotasEnAdopcion');
-    const mascotasEnAdopcionParsed = mascotasEnAdopcion ? JSON.parse(mascotasEnAdopcion) : null;
-
-    // Comparar las mascotas en adopción con las disponibles
-    for (let i = 0; i < this.animales.length; i++) {
-      const animal = this.animales[i];
-      if (mascotasEnAdopcionParsed && mascotasEnAdopcionParsed.includes(animal.nombre)) {
-        // Si la mascota está en proceso de adopción, agregar un mensaje
-         return;
-      }
-    }
-    this.animalesDisponibles = this.animales.filter(
-      (animal) => !this.tieneCitaAnterior(animal) && !this.tieneCitaPendiente(animal)
-    );
   }
 
 
