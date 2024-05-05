@@ -1,14 +1,17 @@
 .intro-text {
-    font-family: 'Montserrat', sans-serif; /* Fuente más moderna y amigable */
-    font-size: 1.2rem; /* Tamaño de fuente ligeramente más grande */
-    line-height: 1.8; /* Mayor interlineado para mejor legibilidad */
-    color: #333; /* Color de texto más oscuro y legible */
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8); /* Sutil sombra para resaltar el texto */
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.2rem; 
+    line-height: 1.8; 
+    color: #333; 
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8); 
+  }
+
+  .container{
+    margin-top: 30px;
   }
   
-  /* Estilos adicionales para mejorar la apariencia */
   .intro-text p {
-    margin-bottom: 1.5rem; /* Espacio adicional entre párrafos */
+    margin-bottom: 1.5rem; 
   }
   
   .closebtn {
@@ -17,13 +20,13 @@
   
 
   .intro-text strong {
-    color: #E67E22; /* Color anaranjado llamativo para resaltar texto */
-    font-weight: 700; /* Negrita más pronunciada */
+    color: #E67E22; 
+    font-weight: 700; 
   }
   
   .intro-text em {
-    color: #16A085; /* Color verde llamativo para resaltar texto */
-    font-style: italic; /* Cursiva */
+    color: #16A085; 
+    font-style: italic; 
   }
   
   h2.text-primary {
