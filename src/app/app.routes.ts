@@ -6,6 +6,7 @@ import { ReporteComponent } from './reporte/reporte.component';
 import { BuscarComponent } from './buscar/buscar.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { EquipoComponent } from './equipo/equipo.component';
+import { AyudainfoComponent } from './ayudainfo/ayudainfo.component';
 
 
 export const routes: Routes = [
@@ -16,5 +17,6 @@ export const routes: Routes = [
     {path: 'reporte', component: ReporteComponent},
     {path: 'nosotros', component: NosotrosComponent},
     {path: 'equipo', component: EquipoComponent},
+    {path: 'ayuda', component: AyudainfoComponent},
     {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
