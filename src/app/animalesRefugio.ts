@@ -2,7 +2,7 @@ import { animPeGa } from "./animales";
 
 export const ANIMALES: animPeGa[]=[
     {
-        imagen: "../assets/imagenes/perros_gatos/pe1.png",
+        imagen: "assets/imagenes/perros_gatos/pe1.png",
         nombre: "Buddy",
         edad: "6 meses",
         sexo: "Macho",
@@ -13,7 +13,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/ga1.png",
+        imagen: "assets/imagenes/perros_gatos/ga1.png",
         nombre: "Loki",
         edad: "1 año",
         sexo: "Macho",
@@ -24,7 +24,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/pe2.png",
+        imagen: "assets/imagenes/perros_gatos/pe2.png",
         nombre: "Smokey",
         edad: "2 meses",
         sexo: "Hembra",
@@ -35,7 +35,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/ga2.png",
+        imagen: "assets/imagenes/perros_gatos/ga2.png",
         nombre: "Milo",
         edad: "2 años",
         sexo: "Macho",
@@ -46,7 +46,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/pe3.png",
+        imagen: "assets/imagenes/perros_gatos/pe3.png",
         nombre: "Nala",
         edad: "8 meses",
         sexo: "Hembra",
@@ -57,7 +57,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/ga3.png",
+        imagen: "assets/imagenes/perros_gatos/ga3.png",
         nombre: "Whiskers",
         edad: "3 años",
         sexo: "Macho",
@@ -69,7 +69,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/pe4.png",
+        imagen: "assets/imagenes/perros_gatos/pe4.png",
         nombre: "Zeus",
         edad: "1 año",
         sexo: "Macho",
@@ -80,7 +80,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/ga4.png",
+        imagen: "assets/imagenes/perros_gatos/ga4.png",
         nombre: "Simba",
         edad: "3 años",
         sexo: "Hembra",
@@ -91,7 +91,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/pe5.png",
+        imagen: "assets/imagenes/perros_gatos/pe5.png",
         nombre: "Cleo",
         edad: "5 meses",
         sexo: "Hembra",
@@ -102,7 +102,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/ga5.png",
+        imagen: "assets/imagenes/perros_gatos/ga5.png",
         nombre: "Oliver",
         edad: "5 meses",
         sexo: "Macho",
@@ -114,7 +114,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/pe6.png",
+        imagen: "assets/imagenes/perros_gatos/pe6.png",
         nombre: "Max",
         edad: "5 años",
         sexo: "Macho",
@@ -125,7 +125,7 @@ export const ANIMALES: animPeGa[]=[
     },
 
     {
-        imagen: "../assets/imagenes/perros_gatos/ga6.png",
+        imagen: "assets/imagenes/perros_gatos/ga6.png",
         nombre: "Gizmo",
         edad: "1 año",
         sexo: "Macho",
