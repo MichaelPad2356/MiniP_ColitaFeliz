@@ -5,6 +5,7 @@ import { DatosCitasComponent } from './datos-citas/datos-citas.component';
 import { ReporteComponent } from './reporte/reporte.component';
 import { BuscarComponent } from './buscar/buscar.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { AyudainfoComponent } from './ayudainfo/ayudainfo.component';
 
 
 export const routes: Routes = [
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path: 'buscar', component: BuscarComponent},
     {path: 'reporte', component: ReporteComponent},
     {path: 'nosotros', component: NosotrosComponent},
+    {path: 'ayuda', component: AyudainfoComponent},
     {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
