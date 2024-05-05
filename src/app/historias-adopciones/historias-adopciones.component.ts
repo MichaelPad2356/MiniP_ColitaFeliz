@@ -48,7 +48,7 @@ export class HistoriasAdopcionesComponent {
       id: 5, 
       title: 'El resurgir de Simon', 
       summary: 'Un gato callejero supera las adversidades y encuentra un hogar.', 
-      details: 'Simon fue encontrado en un estado deplorable, luchando por sobrevivir en las calles. Después de ser rescatado, recibió atención médica y fue llevado a un refugio. A pesar de sus dificultades iniciales, Simba demostró ser un gato valiente y resistente. Con el tiempo, su personalidad afectuosa y juguetona cautivó a una familia compasiva que decidió darle un hogar para siempre.', 
+      details: 'Simon fue encontrado en un estado deplorable, luchando por sobrevivir en las calles. Después de ser rescatado, recibió atención médica y fue llevado a un refugio. A pesar de sus dificultades iniciales, Simon demostró ser un gato valiente y resistente. Con el tiempo, su personalidad afectuosa y juguetona cautivó a una familia compasiva que decidió darle un hogar para siempre.', 
       imageUrl: '../assets/imagenes/mascotas_adoptadas/Ext3.jpg', 
       date: '10/05/2020' 
     },
