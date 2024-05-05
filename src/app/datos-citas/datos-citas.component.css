@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 
  /* Estilos generales */
  body {
@@ -19,7 +19,7 @@
   margin: 0 auto;
 }
 
-/* Estilos para la sección de detalles del animal */
+
 .animal-details-container {
   flex: 1;
   padding-right: 30px;
@@ -45,24 +45,24 @@
 }
 
 label {
-  font-family: 'Montserrat', sans-serif; /* Fuente elegante */
+  font-family:'Courier New', Courier, monospace; 
   font-size: 16px;
-  font-weight: 600; /* Negrita */
-  color: #4c6ef5; /* Azul llamativo */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra de texto para mayor legibilidad */
-  padding: 8px 12px; /* Espacio interno */
-  border-radius: 4px; /* Bordes redondeados */
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Sombra suave */
-  transition: all 0.2s ease-in-out; /* Transición suave */
+  font-weight: 600; 
+  color: #4c6ef5; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+  padding: 8px 12px; 
+  border-radius: 4px; 
+ 
+  transition: all 0.2s ease-in-out; 
 }
 
 label:hover {
-  color: #2f44b0; /* Azul más oscuro al pasar el cursor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el cursor */
-  transform: translateY(-2px); /* Pequeño desplazamiento hacia arriba al pasar el cursor */
+  color: #2f44b0; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-2px); 
 }
 
-/* Estilos para la imagen del animal */
+
 .animal-img-container {
   overflow: hidden;
   border-radius: 10px;
