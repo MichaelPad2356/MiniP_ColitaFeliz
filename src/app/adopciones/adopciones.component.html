@@ -1,11 +1,11 @@
 <body>
-  <h1 class="text-center mt-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #010362; font-size: 30px;">Colita Feliz Adopciones</h1>
+  <h1 class="text-center mt-4" [style.font-family]="'Montserrat, sans-serif'" [style.font-weight]="'700'" [style.color]="'#010362'" [style.font-size]="'30px'">Colita Feliz Adopciones</h1>
   <div class="card-columns">
     @for(adopt of animalesAdop; track adopt; let i=$index){
-    <div class="card rounded-lg shadow-lg mb-4" style="max-width: 100%;">
+    <div class="card rounded-lg shadow-lg mb-4" [style.max-width]="'100%'">
       <img src="{{adopt.imagen}}" class="card-img-top rounded-top" alt="...">
       <div class="card-body">
-        <h3 class="card-title text-center mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #FF6347;">{{adopt.nombre}}</h3>
+        <h3 class="card-title text-center mb-4" [style.font-family]="'Montserrat, sans-serif'" [style.font-weight]="'700'" [style.color]="'#FF6347'">{{adopt.nombre}}</h3>
         <div class="d-flex flex-wrap justify-content-between mb-3">
           <div class="mr-3">
             <h6 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #333;"><span style="color: #007bff;">Edad:</span> {{adopt.edad}}</h6>
