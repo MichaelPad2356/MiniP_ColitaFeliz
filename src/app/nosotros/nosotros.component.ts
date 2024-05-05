@@ -1,12 +1,21 @@
+
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { DomseguroPipe } from '../domseguro.pipe';
 
 @Component({
-  selector: 'app-nosotros',
+  selector: 'app-nosotros', 
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet, DomseguroPipe],
   templateUrl: './nosotros.component.html',
-  styleUrl: './nosotros.component.css'
+  styleUrls: ['./nosotros.component.css']
+ 
 })
 export class NosotrosComponent {
+  title = 'videoseguro';
+  video:string="zQ6CB4pZIYs";
 
+  title2 = 'videoseguro2';
+  instalaciones:string="s1QUYZyQKjA";
+  
 }
