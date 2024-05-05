@@ -50,8 +50,16 @@
   <p class="abandono" > Además, 7 de cada 10 mascotas que fueron adquiridas en las festividades de Navidad y Día de Reyes terminan en la calle o en una azotea.
   </p>
   <div class="video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/zQ6CB4pZIYs" title="AFFINITY #NOSONUNJUGUETE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div> 
+    <iframe 
+    width="560" 
+    height="315" 
+    [src]="video | domseguro:'https://www.youtube.com/embed/'"
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-inpicture" 
+    allowfullscreen>
+  </iframe>
+   
+  </div> 
     <br><br>
 
   <hr>
@@ -60,7 +68,15 @@
   <br><br>
   <div class="instalaciones">
     <div class="video2">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/s1QUYZyQKjA" title="REFUGIO PARA ANIMALES ABANDONADOS EN MEXICO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe 
+    width="560" 
+    height="315" 
+    [src]="instalaciones | domseguro:'https://www.youtube.com/embed/'"
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-inpicture" 
+    allowfullscreen>
+  </iframe>
+     
     </div>
     <div class="texto">
       <p >El refugio de animales "Colita Feliz" es un oasis de amor y esperanza. Sus luminosos pasillos están adornados con fotos de animales rescatados, mientras que en las habitaciones, camitas suaves y juguetes coloridos esperan a sus ocupantes.</p>

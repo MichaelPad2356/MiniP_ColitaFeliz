@@ -12,10 +12,6 @@ import { DomseguroPipe } from '../domseguro.pipe';
  
 })
 export class NosotrosComponent {
-  title = 'videoseguro';
   video:string="zQ6CB4pZIYs";
-
-  title2 = 'videoseguro2';
   instalaciones:string="s1QUYZyQKjA";
-  
 }

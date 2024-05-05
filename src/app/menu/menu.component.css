@@ -20,8 +20,8 @@
   }
   
   .navbar-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly darker background on hover */
-    color: #E6E6E6; /* Slightly lighter text color on hover */
+    background-color: rgb(0, 7, 144); /* Slightly darker background on hover */
+    color: #8e93a0; /* Slightly lighter text color on hover */
   }
   
   .navbar-nav .nav-link.active {
@@ -147,6 +147,16 @@
     display: block;
     padding: 0.75rem 1rem;
   }
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* Cambia el color del texto de las etiquetas <a> */
+  background-color: #05006e;
+}
+
+.custom-color {
+  color: #ffffff; /* Cambia el color del texto de las etiquetas <a> con la clase custom-color */
+  background-color: #05006e;
 }
 
 

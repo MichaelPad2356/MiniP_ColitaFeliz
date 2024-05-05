@@ -11,6 +11,11 @@
     margin-bottom: 1.5rem; /* Espacio adicional entre párrafos */
   }
   
+  .closebtn {
+    visibility: hidden;
+  }
+  
+
   .intro-text strong {
     color: #E67E22; /* Color anaranjado llamativo para resaltar texto */
     font-weight: 700; /* Negrita más pronunciada */

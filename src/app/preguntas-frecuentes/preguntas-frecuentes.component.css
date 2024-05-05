@@ -1,7 +1,7 @@
 .faq-item {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgb(41, 0, 0);
     margin-bottom: 20px;
     overflow: hidden;
   }
@@ -15,15 +15,20 @@
     padding: 16px 20px;
     display: flex;
     justify-content: space-between;
+    border-radius: 10px;
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: #080076;
   
     h3 {
       margin: 0;
       font-size: 18px;
       font-weight: 600;
-      color: #333;
+      color: #080076;
     }
   
     i {
@@ -33,16 +38,11 @@
     }
   
     &.active {
-      background-color: #ff9966;
+      background-color: #0b0083;
+      border-radius: 10px;
+      color: white;
+
   
-      h3 {
-        color: #fff;
-      }
-  
-      i {
-        color: #fff;
-        transform: rotate(180deg);
-      }
     }
   }
   
@@ -51,12 +51,17 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    color: #080076;
+    letter-spacing: 2px;
+    text-align: justify;
+    font-style: oblique;
+
   
     p {
       margin: 20px 0;
       font-size: 16px;
       line-height: 1.6;
-      color: #555;
+      color: #750d0d;
     }
   
     &.show {

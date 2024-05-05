@@ -4,16 +4,20 @@ import { HistoriasAdopcionesComponent } from '../historias-adopciones/historias-
 import { AdoptionStory } from '../adoption-story.model';
 import { Preguntas } from '../preguntas.model';
 import { PreguntasFrecuentesComponent } from '../preguntas-frecuentes/preguntas-frecuentes.component';
+import { ApiComponentComponent } from '../api-component/api-component.component';
+import { CarruselComponent } from '../carrusel/carrusel.component';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FooterComponent, HistoriasAdopcionesComponent, PreguntasFrecuentesComponent],
+  imports: [FooterComponent, HistoriasAdopcionesComponent, PreguntasFrecuentesComponent, ApiComponentComponent, CarruselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
   selectedStory?: AdoptionStory;
+  
 
   showStoryDetails(story: AdoptionStory) {
     this.selectedStory = story;
